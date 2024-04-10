@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--begin::Head-->
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>PPR | Class</title>
+    <!--begin::Primary Meta Tags-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="AdminLTE 4 | Login Page">
+    <meta name="author" content="ColorlibHQ">
+    <meta name="description" content="AdminLTE is a Free Bootstrap 5 Admin Dashboard, 30 example pages using Vanilla JS.">
+    <meta name="keywords" content="bootstrap 5, bootstrap, bootstrap 5 admin dashboard, bootstrap 5 dashboard, bootstrap 5 charts, bootstrap 5 calendar, bootstrap 5 datepicker, bootstrap 5 tables, bootstrap 5 datatable, vanilla js datatable, colorlibhq, colorlibhq dashboard, colorlibhq admin dashboard">
+    <!--end::Primary Meta Tags-->
+    <!--begin::Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <!--end::Fonts-->
+    <!--begin::Third Party Plugin(OverlayScrollbars)-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/overlayscrollbars@2.1.0/styles/overlayscrollbars.min.css" integrity="sha256-LWLZPJ7X1jJLI5OG5695qDemW1qQ7lNdbTfQ64ylbUY=" crossorigin="anonymous">
+    <!--end::Third Party Plugin(OverlayScrollbars)-->
+    <!--begin::Third Party Plugin(Bootstrap Icons)-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.min.css" integrity="sha256-BicZsQAhkGHIoR//IB2amPN5SrRb3fHB8tFsnqRAwnk=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!--end::Third Party Plugin(Bootstrap Icons)-->
+  <!-- daterange picker -->
+    <link rel="stylesheet" href="../../plugins/daterangepicker/daterangepicker.css">
+    <!-- Tempusdominus Bootstrap 4 -->
+    <link rel="stylesheet" href="../../plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+    <!--begin::Required Plugin(AdminLTE)-->
+    <link rel="stylesheet" href="../../../dist/css/adminlte.css">
+    <!--end::Required Plugin(AdminLTE)-->
+    <!--begin::MDB styles-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.css" rel="stylesheet">
+    <!--end::MDB styles-->
+    <!-- flag-icon-css -->
+    <link rel="stylesheet" href="../../plugins/flag-icon-css/css/flag-icon.min.css">
+    <style>
+      .nav-tabs {
+        overflow-x: auto;
+        overflow-y:hidden;
+        flex-wrap: nowrap;
+      }
+    </style>
+</head>
+<!--end::Head-->
+<!--begin::Body-->
+
+<body class="layout-fixed sidebar-expand-lg bg-body-tertiary">
+    <!--begin::App Wrapper-->
+    <div class="app-wrapper">
+      <!--begin::Header-->
+      <nav class="app-header navbar navbar-expand bg-body">
+        <!--begin::Container-->
+        <div class="container-fluid">
+          <!--begin::Start Navbar Links-->
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" data-lte-toggle="sidebar" href="#" role="button">
+                <i class="bi bi-list"></i>
+              </a>
+            </li>
+          </ul>
+          <!--end::Start Navbar Links-->
+
+          <!--begin::End Navbar Links-->
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link show" data-bs-toggle="dropdown" href="#" aria-expanded="true">
+                <i class="flag-icon flag-icon-us"></i>
+              </a>
+              <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end" data-bs-popper="static">
+                <a href="#" class="dropdown-item">
+                  <i class="flag-icon flag-icon-us mr-2"></i> English
+                </a>
+                <a href="#" class="dropdown-item">
+                  <i class="flag-icon flag-icon-kh mr-2"></i> Khmer
+                </a>
+              </div>
+            </li>
+            <!--begin::User Menu Dropdown-->
+            <li class="nav-item dropdown user-menu">
+              <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                <img src="http://results.bbu.edu.kh/STUDENTS/GetImage?stid=PP48217" class="user-image rounded-circle shadow" alt="User Image">
+                <span class="d-none d-md-inline">Seng Ponleu</span>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-end">
+                <!--begin::User Image-->
+                <li class="user-header text-bg-primary pl-border-radius">
+                  <img src="http://results.bbu.edu.kh/STUDENTS/GetImage?stid=PP48217" class="rounded-circle shadow" alt="User Image">
+
+                  <p>
+                    Seng Ponleu - ICT Teacher
+                    <small>Member since Nov. 2024</small>
+                  </p>
+                </li>
+                <!--end::User Image-->
+                <!--begin::Menu Footer-->
+                <li class="user-footer">
+                  <a href="#" class="btn btn-default btn-flat">Profile</a>
+                  <a href="#" class="btn btn-default btn-flat float-end">Sign out</a>
+                </li>
+                <!--end::Menu Footer-->
+              </ul>
+            </li>
+            <!--end::User Menu Dropdown-->
+          </ul>
+          <!--end::End Navbar Links-->
+        </div>
+        <!--end::Container-->
+      </nav>
+      <!--end::Header-->
+      <!--begin::Sidebar-->
+      <aside class="app-sidebar bg-body-secondary shadow" data-bs-theme="dark">
+        <!--begin::Sidebar Brand-->
+        <div class="sidebar-brand">
+          <!--begin::Brand Link-->
+          <a href="./index.html" class="brand-link">
+            <!--begin::Brand Image-->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/MoEYS_%28Cambodia%29.svg/1200px-MoEYS_%28Cambodia%29.svg.png" alt="PPR Logo" class="brand-image opacity-75 shadow">
+            <!--end::Brand Image-->
+            <!--begin::Brand Text-->
+            <span class="brand-text fw-light">PPR SCHOOL</span>
+            <!--end::Brand Text-->
+          </a>
+          <!--end::Brand Link-->
+        </div>
+        <!--end::Sidebar Brand-->
+        <!--begin::Sidebar Wrapper-->
+        <div class="sidebar-wrapper">
+          <nav class="mt-2">
+            <!--begin::Sidebar Menu-->
+            <ul class="nav sidebar-menu flex-column" data-lte-toggle="treeview" role="menu" data-accordion="false">
+              <li class="nav-item">
+                <a href="#" class="nav-link active">
+                  <i class="nav-icon bi bi-speedometer"></i>
+                  <p>
+                    Dashboard
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon bi bi-buildings-fill"></i>
+                  <p>
+                    School Setup
+                    <i class="nav-arrow bi bi-chevron-right"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="academic_year.html" class="nav-link">
+                      <i class="nav-icon bi bi-circle"></i>
+                      <p>Add Academic Year</p>
+                    </a>
+                    <a href="main_program.html" class="nav-link">
+                      <i class="nav-icon bi bi-circle"></i>
+                      <p>Add Main Program</p>
+                    </a>
+                    <a href="sub_program.html" class="nav-link">
+                      <i class="nav-icon bi bi-circle"></i>
+                      <p>Sub Main Program</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon bi bi-people-fill"></i>
+                  <p>
+                    Students
+                    <i class="nav-arrow bi bi-chevron-right"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="" class="nav-link">
+                      <i class="nav-icon bi bi-circle"></i>
+                      <p>Add Student</p>
+                    </a>
+                    <a href="" class="nav-link">
+                      <i class="nav-icon bi bi-circle"></i>
+                      <p>Student Information</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon  bi bi-person-badge-fill"></i>
+                  <p>
+                    Teachers
+                    <i class="nav-arrow bi bi-chevron-right"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="" class="nav-link">
+                      <i class="nav-icon bi bi-circle"></i>
+                      <p>Add Student</p>
+                    </a>
+                    <a href="" class="nav-link">
+                      <i class="nav-icon bi bi-circle"></i>
+                      <p>Student Information</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon bi bi-layers-fill"></i>
+                  <p>
+                    Academic & Classes
+                    <i class="nav-arrow bi bi-chevron-right"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="../academic_class/class_type.html" class="nav-link">
+                      <i class="nav-icon bi bi-circle"></i>
+                      <p>Class Type</p>
+                    </a>
+                    <a href="../academic_class/class.html" class="nav-link">
+                      <i class="nav-icon bi bi-circle"></i>
+                      <p>Class</p>
+                    </a>
+                    <a href="../academic_class/manage_section.html" class="nav-link">
+                      <i class="nav-icon bi bi-circle"></i>
+                      <p>Manage Section</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon bi bi-file-earmark-fill"></i>
+                  <p>
+                    Subjects
+                    <i class="nav-arrow bi bi-chevron-right"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="subject.html" class="nav-link">
+                      <i class="nav-icon bi bi-circle"></i>
+                      <p>Subject</p>
+                    </a>
+                    <a href="manage_subject.html" class="nav-link">
+                      <i class="nav-icon bi bi-circle"></i>
+                      <p>Manage Subject</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon bi bi-journal-bookmark-fill"></i>
+                  <p>
+                    Examinations
+                    <i class="nav-arrow bi bi-chevron-right"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="" class="nav-link">
+                      <i class="nav-icon bi bi-circle"></i>
+                      <p>Add Student</p>
+                    </a>
+                    <a href="" class="nav-link">
+                      <i class="nav-icon bi bi-circle"></i>
+                      <p>Student Information</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon bi bi-calendar-check-fill"></i>
+                  <p>
+                    Class Schedules
+                    <i class="nav-arrow bi bi-chevron-right"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="" class="nav-link">
+                      <i class="nav-icon bi bi-circle"></i>
+                      <p>Add Student</p>
+                    </a>
+                    <a href="" class="nav-link">
+                      <i class="nav-icon bi bi-circle"></i>
+                      <p>Student Information</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon bi bi-folder-fill"></i>
+                  <p>
+                    Reports
+                    <i class="nav-arrow bi bi-chevron-right"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="" class="nav-link">
+                      <i class="nav-icon bi bi-circle"></i>
+                      <p>Add Student</p>
+                    </a>
+                    <a href="" class="nav-link">
+                      <i class="nav-icon bi bi-circle"></i>
+                      <p>Student Information</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon bi bi-reception-4"></i>
+                  <p>
+                    Apps
+                    <i class="nav-arrow bi bi-chevron-right"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="" class="nav-link">
+                      <i class="nav-icon bi bi-circle"></i>
+                      <p>Add Student</p>
+                    </a>
+                    <a href="" class="nav-link">
+                      <i class="nav-icon bi bi-circle"></i>
+                      <p>Student Information</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <!--                          <i class="nav-icon  bi bi-sliders"></i>-->
+                  <i class="nav-icon bi bi-gear-fill"></i>
+                  <p>
+                    Settings
+                    <i class="nav-arrow bi bi-chevron-right"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="" class="nav-link">
+                      <i class="nav-icon bi bi-circle"></i>
+                      <p>Add Student</p>
+                    </a>
+                    <a href="" class="nav-link">
+                      <i class="nav-icon bi bi-circle"></i>
+                      <p>Student Information</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <!--end::Sidebar Menu-->
+          </nav>
+        </div>
+        <!--end::Sidebar Wrapper-->
+      </aside>
+      <!--end::Sidebar-->
+      <!--begin::App Main-->
+      <main class="app-main">
+        <!--begin::App Content Header-->
+        <div class="app-content-header">
+          <!--begin::Container-->
+          <div class="container-fluid">
+            <!--begin::Row-->
+            <div class="row">
+              <div class="col-sm-6">
+                <h3 class="mb-0">Create Manage Subject</h3>
+              </div>
+              <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-end">
+                  <li class="breadcrumb-item"><a href="file:///D:/bbumit/thesis/projects/HunAdminDesign/dist/pages/index.html">Home</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">
+                    Manage Subject
+                  </li>
+                </ol>
+              </div>
+            </div>
+            <!--end::Row-->
+          </div>
+          <!--end::Container-->
+        </div>
+        <!--end::App Content Header-->
+        <!--begin::App Content-->
+        <div class="app-content">
+          <!--begin::Container-->
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-12 col-sm-12 col-md-12">
+                <form class="row mb-3">
+                  <div class="col-12 col-sm-12 col-md-3">
+                    <label for="year">Academic Year</label>
+                    <select class="form-select form-select-sm" aria-label="Default select example">
+                      <option selected>Open this select menu</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                  </div>
+                  <div class="col-12 col-sm-12 col-md-3">
+                    <label for="subject">Subject</label>
+                    <select class="form-select form-select-sm" aria-label="Default select example">
+                      <option selected>Open this select menu</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                  </div>
+                  <div class="col-12 col-sm-12 col-md-3">
+                    <label for="class">Class</label>
+                    <select class="form-select form-select-sm" aria-label="Default select example">
+                      <option selected>Open this select menu</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                  </div>
+                  <div class="col-auto">
+                    <button type="submit" class="btn btn-primary btn-sm mt-4 rounded-0">Filter</button>
+                  </div>
+                </form>
+              </div>
+              <div class="col-12 col-sm-12 col-md-12">
+                <div class="card card-primary card-outline rounded-0">
+                  <div class="card-header">
+                      <div class="row float-end">
+                        <div class="col-12 col-sm-12 col-md-12">
+                          <button type="button" class="btn btn-primary btn-sm rounded-0" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <i class="fa-solid fa-circle-plus"></i>&nbsp;&nbsp;Add
+                          </button>
+                          <button type="button" class="btn btn-success btn-sm rounded-0">
+                            <i class="fa-solid fa-file-excel"></i>&nbsp;&nbsp;Import
+                          </button>
+                          <button type="button" class="btn btn-info btn-sm rounded-0">
+                            <i class="fa-solid fa-download"></i>&nbsp;&nbsp;Template
+                          </button>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-12 col-sm-12 col-md-12 overflow-auto">
+                        <table class="table">
+                          <thead>
+                          <tr>
+                            <th style="width: 10px">#</th>
+                            <th>Teacher Name</th>
+                            <th>Subject Code Name</th>
+                            <th>Subject Name</th>
+                            <th>Class</th>
+                            <th></th>
+                          </tr>
+                          </thead>
+                          <tbody>
+                          <tr>
+                            <td>1.</td>
+                            <td>Seng Ponleu</td>
+                            <td>K1</td>
+                            <td>Khmer</td>
+                            <td>12</td>
+                            <td>
+                              <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                                <button type="button" class="btn btn-primary rounded-0">
+                                  <i class="fa-solid fa-pen-to-square"></i>
+                                </button>
+                                <button type="button" class="btn btn-danger rounded-0">
+                                  <i class="fa-solid fa-trash"></i>
+                                </button>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>2.</td>
+                            <td>Phon Sambath</td>
+                            <td>M1</td>
+                            <td>Math</td>
+                            <td>12</td>
+                            <td>
+                              <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                                <button type="button" class="btn btn-primary rounded-0">
+                                  <i class="fa-solid fa-pen-to-square"></i>
+                                </button>
+                                <button type="button" class="btn btn-danger rounded-0">
+                                  <i class="fa-solid fa-trash"></i>
+                                </button>
+                              </div>
+                            </td>
+                          </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel">Create Manage Subject</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="row">
+                        <div class="col-12 col-sm-12 col-md-12">
+                          <form>
+                            <div class="mb-3">
+                              <label for="exampleInputPassword1" class="form-label">Class</label>
+                              <select class="form-select" aria-label="Default select example">
+                                <option selected>12</option>
+                                <option value="1">11</option>
+                                <option value="2">10</option>
+                                <option value="3">9</option>
+                              </select>
+                            </div>
+                            <div class="mb-3">
+                              <label for="exampleInputPassword1" class="form-label">Subject</label>
+                              <select class="form-select" aria-label="Default select example">
+                                <option selected>Math</option>
+                                <option value="1">Khmer</option>
+                                <option value="2">Physic</option>
+                                <option value="3">Chemistry</option>
+                              </select>
+                            </div>
+                            <div class="mb-3">
+                              <label for="exampleInputPassword1" class="form-label">Teacher</label>
+                              <select class="form-select" aria-label="Default select example">
+                                <option selected>Seng Ponleu</option>
+                                <option value="1">Phon Sambath</option>
+                                <option value="2">Tonh Ry</option>
+                                <option value="3">Sok Sameth</option>
+                              </select>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary rounded-0" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary rounded-0">Submit</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--end::Container-->
+        </div>
+        <!--end::App Content-->
+      </main>
+      <!--end::App Main-->
+      <!--begin::Footer-->
+      <footer class="app-footer">
+        <!--begin::To the end-->
+        <div class="float-end d-none d-sm-inline">Version 1.0</div>
+        <!--end::To the end-->
+        <!--begin::Copyright-->
+        <strong>
+          Copyright &copy; 2021-2024
+          <a href="https://adminlte.io">Seng Ponleu</a>.
+        </strong>
+        All rights reserved.
+        <!--end::Copyright-->
+      </footer>
+      <!--end::Footer-->
+    </div>
+    <!--end::App Wrapper-->
+    <!-- jQuery -->
+    <script src="../../plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../../plugins/moment/moment.min.js"></script>
+    <script src="../../plugins/inputmask/jquery.inputmask.min.js"></script>
+    <!-- date-range-picker -->
+    <script src="../../plugins/daterangepicker/daterangepicker.js"></script>
+    <!-- Tempusdominus Bootstrap 4 -->
+    <script src="../../plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+    <!--begin::Third Party Plugin(OverlayScrollbars)-->
+    <script src="https://cdn.jsdelivr.net/npm/overlayscrollbars@2.1.0/browser/overlayscrollbars.browser.es6.min.js" integrity="sha256-NRZchBuHZWSXldqrtAOeCZpucH/1n1ToJ3C8mSK95NU=" crossorigin="anonymous"></script>
+    <!--end::Third Party Plugin(OverlayScrollbars)--><!--begin::Required Plugin(popperjs for Bootstrap 5)-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
+    <!--end::Required Plugin(popperjs for Bootstrap 5)--><!--begin::Required Plugin(Bootstrap 5)-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
+    <!--end::Required Plugin(Bootstrap 5)--><!--begin::Required Plugin(AdminLTE)-->
+    <script src="../../../dist/js/adminlte.js"></script>
+    <!--end::Required Plugin(AdminLTE)--><!--begin::OverlayScrollbars Configure-->
+    <script>
+        const SELECTOR_SIDEBAR_WRAPPER = ".sidebar-wrapper";
+        const Default = {
+            scrollbarTheme: "os-theme-light",
+            scrollbarAutoHide: "leave",
+            scrollbarClickScroll: true,
+        };
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const sidebarWrapper = document.querySelector(SELECTOR_SIDEBAR_WRAPPER);
+            if (
+                sidebarWrapper &&
+                typeof OverlayScrollbarsGlobal?.OverlayScrollbars !== "undefined"
+            ) {
+                OverlayScrollbarsGlobal.OverlayScrollbars(sidebarWrapper, {
+                    scrollbars: {
+                        theme: Default.scrollbarTheme,
+                        autoHide: Default.scrollbarAutoHide,
+                        clickScroll: Default.scrollbarClickScroll,
+                    },
+                });
+            }
+        });
+    </script>
+    <!--end::OverlayScrollbars Configure--><!--begin::MDB-->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.js"></script>
+    <!--end::MDB-->
+    <script>
+      $(function () {
+        //Date picker
+        $('#reservationdate').datetimepicker({
+          format: 'L'
+        });
+      })
+    </script>
+    <!--end::Script-->
+</body><!--end::Body-->
+
+</html>
